@@ -10,6 +10,9 @@ import org.springframework.core.io.Resource;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * web3sdk 连接地址和证书配置
+ */
 @Configuration
 @ConfigurationProperties(prefix = "group-channel-connections-config")
 public class GroupChannelConnectionsPropertyConfig {

@@ -8,6 +8,9 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * web3sdk 连接端组配置
+ */
 @Configuration
 @ConfigurationProperties(prefix = "channel-service")
 public class ServiceConfig {
@@ -18,7 +21,6 @@ public class ServiceConfig {
 
     @Bean
     public Service getService(GroupChannelConnectionsConfig groupChannelConnectionsConfig) {
-        System.setProperty("jdk.tls.namedGroups","secp256k1");
         Service channelService = new Service();
         channelService.setConnectSeconds(30);
         channelService.setOrgID(agencyName);
